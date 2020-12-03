@@ -1,0 +1,11 @@
+<h2>Most Popular Tracks</h2>
+
+<a routerLink="/search">Search By Track -></a>
+  
+<div class="track-list">
+  <ng-container *ngIf="tracks$ | async as tracks">
+    <ng-container *ngFor="let track of tracks">
+      <app-track-item [track]="track"></app-track-item>
+    </ng-container>
+  </ng-container>
+</div>

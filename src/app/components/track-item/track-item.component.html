@@ -1,0 +1,10 @@
+<div class="track-list__item">
+  <div class="track__img" *ngIf="track.imgUrl?.length">
+    <img src="{{ track.imgUrl[1]['#text'] }}" alt="">
+  </div>
+  <div class="track__body">
+    <div class="track__name">{{ track.trackName }}</div>
+    <div class="artist__name">{{ track.atristName }}</div>
+    <a href="{{ track.atristUrl }}" *ngIf="track.atristUrl" class="">visit</a>
+  </div>
+</div>

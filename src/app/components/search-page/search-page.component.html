@@ -1,0 +1,12 @@
+<h2>Search By Track</h2>
+
+<app-search-by-track (onSubmitted)="search($event)"></app-search-by-track>
+
+<div class="track-list">
+  <ng-container *ngIf="tracks$ | async as tracks">
+    <div *ngIf="!tracks.length">{{ tracks.length }} results found.</div>
+    <ng-container *ngFor="let track of tracks">
+      <app-track-item [track]="track"></app-track-item>
+    </ng-container>
+  </ng-container>
+</div>

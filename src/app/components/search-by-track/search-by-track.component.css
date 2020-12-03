@@ -1,0 +1,64 @@
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.search-form__label {
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 12px;
+}
+
+.search-form__input {
+  width: 100%;
+  border: 1px solid #dbdbdb;
+  padding: 8px;
+  outline: none;
+  margin-bottom: 4px;
+}
+
+.search-form__input:focus {
+  box-shadow: 0 0 5px #ddd;
+}
+
+.ng-invalid.ng-touched:not(form) {
+  border: 1px solid #c45353;
+  box-shadow: 0 0 5px #c45353;
+}
+
+.search-form__submit-btn {
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  background: #BA0000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  width: 80px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .4s;
+}
+
+.search-form__submit-btn:hover {
+  background: #e51717;
+}
+
+.search-form__submit-btn[disabled] {
+  background: #db8a8a;
+  cursor: not-allowed;
+}
+
+.error-msg {
+  color: #e51717;
+}
+
+@media (min-width: 768px) {
+  .search-form__input {
+    width: 220px;
+  }
+}

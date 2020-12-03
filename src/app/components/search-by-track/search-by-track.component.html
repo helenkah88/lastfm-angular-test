@@ -1,0 +1,6 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSumbit()" class="search-form">
+  <label for="track-name" class="search-form__label">Enter track name</label>
+  <input type="text" id="track-name" class="search-form__input" formControlName="name" required>
+  <div class="error-msg" *ngIf="name.invalid && (name.dirty || name.touched) && name.errors.required">Fill out this field first.</div>
+  <button type="submit" class="search-form__submit-btn" [disabled]="!searchForm.valid">Find</button>
+</form>

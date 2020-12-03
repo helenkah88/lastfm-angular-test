@@ -1,0 +1,47 @@
+:host {
+  display: flex;
+  width: 100%;
+}
+
+.track-list__item {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  background: #f7f7f7;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+}
+
+.track__img {
+  display: flex;
+}
+
+.track__img img {
+  width: 100%;
+  display: block;
+}
+
+.track__body {
+  padding: 6px 15px;
+}
+
+.track__name {
+  font-weight: bold;
+  color: #565656;
+}
+
+.artist__name {
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+
+  :host {
+    width: 180px;
+  }
+
+  .track-list__item {
+    flex-direction: column;
+    margin-right: 20px;
+  }
+}
